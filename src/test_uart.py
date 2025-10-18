@@ -49,7 +49,6 @@ class UARTDriver:
         if timeout >= 50000:
             raise TimeoutError("Timeout waiting for RX data")
         
-        # FIXED: Sample data on the same cycle we assert rd_en
         # The FIFO rd_data is combinational, so it's valid immediately
         self.dut.rx_rd_en.value = 1
         await RisingEdge(self.dut.clk)

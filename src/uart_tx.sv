@@ -73,7 +73,6 @@ module uart_tx (
         end
     end
     
-    // FIXED: Output logic with proper bit selection
     always_comb begin
         tx_busy = (current_state != IDLE);
         tx_done = (current_state == STOP) && baud_tick;
