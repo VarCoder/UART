@@ -1,0 +1,8 @@
+.settings/
+.vscode/
+__pycache__/
+src/sim_build/
+*.pyc
+*.xml
+*.log
+.project
